@@ -5,6 +5,7 @@ export const StyledMobileNavContainer = styled.nav`
   position: absolute;
   max-height: 0;
   width: 20rem;
+  box-shadow: ${({ theme }) => theme.darkShadow};
   right: 1rem;
   top: 1rem;
   border-radius: 0.5rem;
@@ -23,6 +24,14 @@ export const StyledMobileNavContainer = styled.nav`
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.small}) {
+    display: none;
   }
 `;
 
