@@ -22,10 +22,7 @@ export default function HeaderNavDropdown({
     <StyledHeaderNavDropdown
       className={isOpen ? "active" : ""}
       onMouseLeave={(e) => {
-        console.log("clienty" + e.clientY);
-        console.log("bounding" + e.currentTarget.getBoundingClientRect().top);
-
-        if (e.clientY < e.currentTarget.getBoundingClientRect().top + 10) {
+        if (e.clientY < e.currentTarget.getBoundingClientRect().top + 20) {
           return;
         }
 
